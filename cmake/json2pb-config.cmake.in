@@ -1,0 +1,10 @@
+@PACKAGE_INIT@
+
+set(USE_EXTERNAL_PICOJSON @EXTERNAL_PICOJSON@)
+
+include(CMakeFindDependencyMacro) 
+
+if(USE_EXTERNAL_PICOJSON)
+   find_dependency(picojson REQUIRED)
+endif()
+
